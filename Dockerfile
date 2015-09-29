@@ -13,8 +13,8 @@ RUN adduser --disabled-password --home /dogecoin --gecos "" dogecoin
 RUN echo "dogecoin ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 WORKDIR /usr/local/src
-RUN wget https://github.com/dogecoin/dogecoin/releases/download/v1.8.0/dogecoin-1.8.0-linux64.zip
-RUN unzip dogecoin-1.8.0-linux64.zip
+RUN wget https://github.com/dogecoin/dogecoin/releases/download/v1.8.2/dogecoin-1.8.2-linux64.zip
+RUN unzip dogecoin-1.8.2-linux64.zip
 RUN chmod +x dogecoind dogecoin-cli
 RUN ln -s /usr/local/src/dogecoind /usr/local/bin/dogecoind
 RUN ln -s /usr/local/src/dogecoin-cli /usr/local/bin/dogecoin-cli
